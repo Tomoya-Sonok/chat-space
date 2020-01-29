@@ -1,0 +1,15 @@
+current directory: /Users/wlcmty08kh/Desktop/tech-exp-projects/chat-space/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+/Users/wlcmty08kh/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200129-14169-eav6un.rb extconf.rb
+creating Makefile
+
+current directory: /Users/wlcmty08kh/Desktop/tech-exp-projects/chat-space/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/wlcmty08kh/Desktop/tech-exp-projects/chat-space/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/wlcmty08kh/Desktop/tech-exp-projects/chat-space/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.6.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20200129-14169-qcpptt
