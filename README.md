@@ -13,8 +13,8 @@
 ## messages
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|string|null: false|
+|body|text||
+|image|string||
 |group_id|integer|null: false|
 |user_id|integer|null: false|
 <!-- |created_at||| -->
