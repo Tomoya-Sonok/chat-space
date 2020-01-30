@@ -20,11 +20,9 @@
 <!-- |created_at||| -->
 <!-- |updated_at||| -->
 
-
 ### Association
  - belongs_to :group
  - belongs_to :user
-
 
 ## users
 |Column|Type|Options|
@@ -34,8 +32,19 @@
 <!-- |created_at||| -->
 <!-- |updated_at||| -->
 
-
 ### Association
  - has_many :messages
  - has_many :groups_users
  - has_many :groups, through: :groups_users
+
+ ## groups
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+<!-- |created_at||| -->
+<!-- |updated_at||| -->
+
+### Association
+ - has_many :messages
+ - has_many :groups_users
+ - has_many :users, through: :groups_users
