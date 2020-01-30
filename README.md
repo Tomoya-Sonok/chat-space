@@ -1,4 +1,4 @@
-# README
+# DB設計
 
 ## groups_users
 |Column|Type|Options|
