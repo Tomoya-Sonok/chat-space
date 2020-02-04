@@ -4,23 +4,15 @@
       .side-bar__user-name__top-items__name
         tomoya
       .side-bar__user-name__top-items__icons
-        = link_to "#", class: 'side-bar__user-name__top-items__icons__edit' do
+        = link_to new_group_path, class: 'side-bar__user-name__top-items__icons__edit' do
           = icon('fa', 'edit')
-        = link_to "#", class: 'side-bar__user-name__top-items__icons__cog' do
+        = link_to edit_user_path(current_user.id), class: 'side-bar__user-name__top-items__icons__cog' do
           = icon('fa', 'cog')
   .side-bar__group-list
-    .side-bar__group-list__a-group
-      .side-bar__group-list__a-group__group-name
-        techcamp1
-      .side-bar__group-list__a-group__group-text
-        まだメッセージがありません。
-    .side-bar__group-list__a-group
-      .side-bar__group-list__a-group__group-name
-        techcamp2
-      .side-bar__group-list__a-group__group-text
-        まだメッセージがありません。
-    .side-bar__group-list__a-group
-      .side-bar__group-list__a-group__group-name
-        techcamp3
-      .side-bar__group-list__a-group__group-text
-        まだメッセージがありません。
+    - current_user.groups.each do |group|
+      .side-bar__group-list__a-group
+        = link_to '#' do
+          .side-bar__group-list__a-group__group-name
+            = group.name
+          .side-bar__group-list__a-group__group-text
+            メッセージはまだありません。
