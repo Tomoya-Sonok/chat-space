@@ -1,27 +1,26 @@
--# .side-bar
--#   .header
--#     %h3.header__name
--#       ユーザーネーム
--#     %ul.header__lists
--#       %li.list
--#         = link_to do
--#           = fa_icon 'pencil-square-o', class: 'icon'
--#       %li.list
--#         = link_to do
--#           = fa_icon 'cog', class: 'icon'
--#   .groups
--#     .group
--#       .group__name
--#         グループ名
--#       .group__message
--#         新着メッセージ
--#     .group
--#       .group__name
--#         グループ名
--#       .group__message
--#         新着メッセージ
--#     .group
--#       .group__name
--#         グループ名
--#       .group__message
-        新着メッセージ
+.side-bar
+  .side-bar__user-name
+    .side-bar__user-name__top-items
+      .side-bar__user-name__top-items__name
+        tomoya
+      .side-bar__user-name__top-items__icons
+        = link_to "#", class: 'side-bar__user-name__top-items__icons__edit' do
+          = icon('fa', 'edit')
+        = link_to "#", class: 'side-bar__user-name__top-items__icons__cog' do
+          = icon('fa', 'cog')
+  .side-bar__group-list
+    .side-bar__group-list__a-group
+      .side-bar__group-list__a-group__group-name
+        techcamp1
+      .side-bar__group-list__a-group__group-text
+        まだメッセージがありません。
+    .side-bar__group-list__a-group
+      .side-bar__group-list__a-group__group-name
+        techcamp2
+      .side-bar__group-list__a-group__group-text
+        まだメッセージがありません。
+    .side-bar__group-list__a-group
+      .side-bar__group-list__a-group__group-name
+        techcamp3
+      .side-bar__group-list__a-group__group-text
+        まだメッセージがありません。
