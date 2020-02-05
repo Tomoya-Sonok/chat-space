@@ -2,7 +2,7 @@
   .side-bar__user-name
     .side-bar__user-name__top-items
       .side-bar__user-name__top-items__name
-        tomoya
+        = current_user.name
       .side-bar__user-name__top-items__icons
         = link_to new_group_path, class: 'side-bar__user-name__top-items__icons__edit' do
           = icon('fa', 'edit')
@@ -11,8 +11,8 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .side-bar__group-list__a-group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .side-bar__group-list__a-group__group-name
             = group.name
           .side-bar__group-list__a-group__group-text
-            メッセージはまだありません。
+            = group.show_last_message

@@ -56,6 +56,10 @@ $font-gray: #999999;
       width: 100%;
       margin-bottom: 40px;
       color: $font-white;
+      a{
+        text-decoration: none;
+        color: white;
+      }
       &__group-name{
         font-size: 15px;
         margin-bottom: 5px;
@@ -91,15 +95,17 @@ $font-gray: #999999;
       &__members{
         font-size: 12px;
         color: $font-gray;
+        display: flex;
+        ul{
+          display: flex;
+        }
       }
     }
     &__right-content{
       height: 40px;
-      width: 72px;
       margin-top: 30px;
-      
       display: flex;
-      align-items: center;
+      line-height: 40px;
       text-align: center;
       padding: 0 20px;
       border: solid 1px #38aef0;
@@ -134,50 +140,58 @@ $font-gray: #999999;
       &__message{
         margin-bottom: 10px;
         font-size: 14px;
+        &__content{
+          
+        }
+        &__image{
+          background-size: cover;;
+        }
       }
     }
   }
   &__message-form{
     height: 90px;
     width: 100%;
+    padding: 20px 40px;
     background-color: #dddddd;
     display: flex;
     align-items: center;
-    padding: 20px 40px;
-    &__form-box{
-      height: 50px;
+    .new_message{
       width: 100%;
-      background-color: $font-white;
-      position: relative;
       display: flex;
-      &__type-message{
+      .chat-main__message-form__form-box{
         height: 50px;
         width: 100%;
-        border: none;
-        outline: none;
-        padding: 0 40px 0 10px;
-      }
-      &__img-pick{
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        font-size: 1.3rem;
-        cursor: pointer;
-        input{
-          display: none;
+        background-color: $font-white;
+        position: relative;
+        display: flex;
+        &__type-message{
+          height: 50px;
+          width: 100%;
+          border: none;
+          outline: none;
+          padding: 0 40px 0 10px;
+        }
+        &__img-pick{
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          font-size: 1.3rem;
+          cursor: pointer;
+          &__hidden{
+            display: none;
+          }
         }
       }
-    }
-    &__send-btn{
-      height: 50px;
-      width: 100px;
-      line-height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
-      text-align: center;
-      color: $font-white;
-      background-color: #38aef0;;
-      text-decoration: none;
+      .chat-main__message-form__send-btn{
+        height: 50px;
+        width: 100px;
+        margin-left: 15px;
+        padding: 0 30px;
+        color: $font-white;
+        background-color: #38aef0;;
+        text-decoration: none;
+      }
     }
   }
 }
