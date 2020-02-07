@@ -7,7 +7,7 @@
         Member：
         %ul
           - @group.users.each do |user|
-            %li= user.name
+            %li= "#{user.name} &nbsp;".html_safe
     .chat-main__group-info__right-content
       = link_to edit_group_path(params[:group_id]), class: "chat-main__group-info__right-content__edit" do
         Edit
