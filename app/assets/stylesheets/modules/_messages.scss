@@ -121,6 +121,7 @@ $font-gray: #999999;
     width: 100%;
     background-color: #fafafa;
     padding: 46px 40px;
+    overflow: auto;
     &__a-message{
       padding-bottom: 40px;
       &__user-info{
